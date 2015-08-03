@@ -81,6 +81,7 @@ class HistoryView(PaymentsContextMixin, TemplateView):
 @require_POST
 @login_required
 def change_card(request):
+    data = {}
     try:
         customer = request.user.customer
         send_invoice = customer.card_fingerprint == ""
