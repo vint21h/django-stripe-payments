@@ -72,7 +72,7 @@ class EventProcessingException(models.Model):
         )
 
     def __unicode__(self):
-        return six.u("<{}, pk={}, Event={}>").format(self.message, self.pk, self.event)
+        return six.u("<{0}, pk={1}, Event={2}>").format(self.message, self.pk, self.event)
 
 
 class Event(StripeObject):
